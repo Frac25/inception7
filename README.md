@@ -344,6 +344,7 @@ https://<DOMAIN>
 Example:
 
 ```text
+https://10.13.250.105/
 https://sydubois.42.fr
 ```
 
@@ -354,6 +355,14 @@ https://sydubois.42.fr/wp-admin
 ```
 
 Because the SSL certificate is self-signed, the browser may display a security warning.
+
+
+From a machine without graphical interface:
+
+```text
+curl -k https://sydubois.42.fr
+curl -k -I https://sydubois.42.fr
+```
 
 ---
 

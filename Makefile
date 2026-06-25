@@ -38,12 +38,11 @@ fclean:
 	sudo rm -rf /home/$(USER)/data/mariadb
 	sudo rm -rf /home/$(USER)/data/wordpress
 
-	echo "Recreating clean data directories..."
-	mkdir -p /home/$(USER)/data/mariadb
-	mkdir -p /home/$(USER)/data/wordpress
-
 	echo "Removing secrets..."
 	sudo rm -rf ./secrets
+
+	echo "Removing .env ..."
+	sudo rm -rf ./srcs/.env
 
 	echo "Full clean completed."
 
@@ -54,6 +53,9 @@ secrets:
 	touch secrets/db_user_password
 	touch secrets/wp_user_password
 	touch secrets/wp_root_password
+	touch srcs/.env
+	mkdir -p /home/$(USER)/data/mariadb
+	mkdir -p /home/$(USER)/data/wordpress
 
 # for single testing
 up:
