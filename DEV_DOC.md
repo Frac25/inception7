@@ -14,7 +14,7 @@ Verify installation:
 
 ```bash
 docker --version
-docker-compose --version
+docker compose version
 make --version
 ```
 
@@ -54,7 +54,7 @@ And add :
 
 ```text
 127.0.0.1 sydubois.42.fr
-37.59.120.163   sydubois.42.fr
+
 ```
 
 ---
@@ -211,6 +211,18 @@ List running containers:
 docker ps
 ```
 
+Display logs:
+
+```bash
+docker compose -f srcs/docker-compose.yml logs
+```
+
+Display logs for one service:
+
+```bash
+docker compose -f srcs/docker-compose.yml logs wordpress
+```
+
 Open a shell inside a container:
 
 ```bash
@@ -231,18 +243,6 @@ SHOW DATABASES;
 USE wordpress_db;
 SHOW TABLES;
 SELECT* FROM wp_users;
-```
-
-Display logs:
-
-```bash
-docker-compose -f srcs/docker-compose.yml logs
-```
-
-Display logs for one service:
-
-```bash
-docker-compose -f srcs/docker-compose.yml logs wordpress
 ```
 
 ---

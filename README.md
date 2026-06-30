@@ -249,7 +249,7 @@ Verify installation:
 
 ```bash
 docker --version
-docker-compose --version
+docker compose version
 make --version
 ```
 
@@ -344,7 +344,7 @@ https://<DOMAIN>
 Example:
 
 ```text
-https://10.13.250.105/
+https://10.0.2.15/
 https://sydubois.42.fr
 ```
 
